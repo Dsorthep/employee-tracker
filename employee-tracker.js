@@ -1,6 +1,6 @@
 // DEPENDENCIES
 const inquirer = require('inquirer');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const connection = require('./connection.js');
 const {viewEmployees,viewByDepartment,viewByRoles,viewDepartments,viewRoles}  = require('./assets/view.js');
 const {addEmployee,addDepartment,addRole} = require('./assets/add.js');

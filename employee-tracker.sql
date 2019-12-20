@@ -52,4 +52,4 @@ VALUES ('Jake', 'Peralta', 1),
        ('Raymond', 'Holt', 6),
        ('Terry', 'Jeffords', 7);
 
-      ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+      
