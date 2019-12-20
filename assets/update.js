@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const mysql = require('mysql2');
+const mysql = require('mysql');
 const connection = require('../connection.js');
 
 

@@ -1,5 +1,5 @@
 // DEPENDENCIES
-const mysql = require("mysql2");
+const mysql = require("mysql");
 
 
 // CONNECTING TO MYSQL
