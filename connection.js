@@ -5,7 +5,7 @@ const mysql = require("mysql");
 // CONNECTING TO MYSQL
     const connection = mysql.createConnection({
         host: "localhost",
-        port: 3000,
+        port: 8889,
         user: "root",
         password: "root",
         database: "employeeTracker_DB"

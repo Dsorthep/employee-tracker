@@ -1,7 +1,7 @@
 # employee-tracker
 Homework # 12
 
-https://dsorthep.github.io/employee-tracker/
+https://github.com/Dsorthep/employee-tracker   LINK TO THE REPO
 
 WELCOME TO EMPLOYEE TRACKER
 
@@ -13,5 +13,4 @@ SO THAT YOU can organize and plan YOUR business
 
 
 TECHNOLOGIES:
-MySQL
-Inquirer
+MySQL / Inquirer
