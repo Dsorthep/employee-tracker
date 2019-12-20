@@ -8,7 +8,7 @@ USE employeeTracker_DB;
 /* CREATING TABLES FOR DEPARTMENT, ROLE, AND EMPLOYEE */
 CREATE TABLE department (
   id INT NOT NULL AUTO_INCREMENT,
-  department_name VARCHAR(30) NOT NULL,
+  name VARCHAR(30) NOT NULL,
   PRIMARY KEY (id)
 );
 
