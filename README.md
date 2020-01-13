@@ -14,3 +14,7 @@ SO THAT YOU can organize and plan YOUR business
 
 TECHNOLOGIES:
 MySQL / Inquirer
+
+DEMO:
+
+![employee-tracker-demo](https://github.com/Dsorthep/employee-tracker/blob/master/assets/employee-tracker.gif)
