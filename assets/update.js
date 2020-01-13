@@ -1,5 +1,4 @@
 const inquirer = require('inquirer');
-const mysql = require('mysql');
 const connection = require('../connection.js');
 
 
@@ -37,21 +36,21 @@ function updateEmployee(){
     .then(async function(answer) {
         const employeeName = answer.employee;
         if(answer.newTitle === "Sales Lead"){
-            const roleID = 1;
+            // const roleID = 1;
         }else  if(answer.newTitle === "SalesPerson"){
-            const roleID = 2;
+            // const roleID = 2;
         }else if(answer.newTitle === "Lead Engineer"){
-            const roleID = 3;
+            // const roleID = 3;
         }else if(answer.newTitle === "Software Engineer"){
-            const roleID = 4;
+            // const roleID = 4;
         }else if(answer.newTitle === "Accountant"){
-            const roleID = 5;
+            // const roleID = 5;
         }else if(answer.newTitle === "Legal Team Lead"){
-            const roleID = 6;
+            // const roleID = 6;
         }else if(answer.newTitle === "Lawyer"){
-            const roleID = 7;
+            // const roleID = 7;
         }else if(answer.newTitle === "Lead Engineer"){
-            const roleID = 8;
+            // const roleID = 8;
         }
         connection.query(`UPDATE employee SET role_id = "${roleID}" WHERE id = "${employeeName}"`, function(err, res) {
             if (err) throw err;

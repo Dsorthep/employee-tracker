@@ -1,7 +1,7 @@
 // DEPENDENCIES
 const inquirer = require('inquirer');
 const connection = require("../connection.js");
-const printTable = require('console.table');
+const {printTable} = require('console-table-printer');
 
 
 // FUNCTION TO VIEW EMPLOYEES

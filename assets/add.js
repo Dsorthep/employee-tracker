@@ -1,5 +1,4 @@
 const inquirer = require('inquirer');
-const mysql = require('mysql');
 const connection = require('../connection.js');
 
 // FUNCTION TO ADD EMPLOYEES
@@ -31,6 +30,19 @@ function addEmployee(){
               }
             },
             {
+              name: "role_id",
+              type: "input",
+              message: "What is the employee's role ID?",
+              validate: function(value){
+                  const string = value.match(/^\s*\S+.*/);
+                  if (string) {
+                    return true;
+                  } else {
+                    return "Please enter the Employee's ROLE ID ";
+                  }
+                }
+              },
+            {
                 name: "title",
                 type: "list",
                 message: "What is the employee's job title?",
@@ -49,22 +61,23 @@ function addEmployee(){
         .then(async function(answer){
             const firstName = answer.first_name;
             const lastName = answer.last_name;
+            const roleID = answer.role_id;
             if(answer.title === "Sales Lead"){
-                const roleID = 1;
+                // let roleID = 1;
             }else  if(answer.title === "SalesPerson"){
-                const roleID = 2;
+                // let roleID = 2;
             }else if(answer.title === "Lead Engineer"){
-                const roleID = 3;
+                // let roleID = 3;
             }else if(answer.title === "Software Engineer"){
-                const roleID = 4;
+                // let roleID = 4;
             }else if(answer.title === "Accountant"){
-                const roleID = 5;
+                // let roleID = 5;
             }else if(answer.title === "Legal Team Lead"){
-                const roleID = 6;
+                // let roleID = 6;
             }else if(answer.title === "Lawyer"){
-                const roleID = 7;
+                // let roleID = 7;
             }else if(answer.title === "Lead Engineer"){
-                const roleID = 8;
+                // let roleID = 8;
             }
             
             connection.query(`INSERT INTO employee (first_name,last_name,role_id) VALUES ("${firstName}","${lastName}","${roleID}")`, function(err, res) {
@@ -92,7 +105,20 @@ function addDepartment(){
                   return "Please enter the DEPARTMENT ";
                 }
               }
+            },
+            {
+              name: "department_id",
+              type: "input",
+              message: "Please add the department ID",
+              validate: function(value){
+              const string = value.match(/^\s*\S+.*/);
+              if (string) {
+                return true;
+              } else {
+                return "Please enter the DEPARTMENT ID ";
+              }
             }
+          }
             ]) .then(async function(answer){
             const department = answer.department;
             connection.query(`INSERT INTO department (name) VALUES ("${department}")`, function(err, res) {
@@ -148,16 +174,17 @@ function addRole(){
         ]) .then(async function(answer){
         const title = answer.role;
         const salary = answer.salary;
+        const departmentid = answer.department_id
         if(answer.department === "Sales"){
-            const departmentid = 1;
+            // let departmentid = 1;
         }else if(answer.department === "Engineering"){
-            const departmentid = 2;
+            // let departmentid = 2;
         }else if(answer.department === "Finance"){
-            const departmentid = 3;
+            // let departmentid = 3;
         }else if(answer.department === "Legal"){
-            const departmentid = 4;
+            // let departmentid = 4;
         }else if(answer.department === "Quality"){
-            const departmentid = 5;
+            // let departmentid = 5;
         }
         connection.query(`INSERT INTO role (title,salary,department_id) VALUES ("${title}","${salary}","${departmentid}")`, function(err, res) {
             if (err) throw err;
